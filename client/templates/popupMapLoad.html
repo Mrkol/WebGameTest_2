@@ -1,0 +1,13 @@
+<div class="popup-map-load" ng-show="show()" ng-mousedown="startMoving($event)" ng-style="{'left': posX, 'top': posY}">
+    <div_ class="popup-map-load-list">
+        <div class="popup-map-load-list-item" ng-repeat="s in mapList track by $index" ng-click="select($index)" ng-style="{'text-decoration': selected == $index ? 'underline' : 'none'}">
+            <span class="unselectable default-cursor click-through">
+                {{s}}
+            </span>
+        </div>
+    </div_>
+
+    <input type="text" ng-value="mapList[selected]" class="popup-map-load-path" readonly/>
+    <input type="button" value="Load" class="popup-map-load-done" ng-click="done()" ng-disabled="!mapList[selected]"/>
+    <input type="button" value="X" class="popup-close" ng-click="close()"/>
+</div>

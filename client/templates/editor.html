@@ -1,0 +1,63 @@
+<div class="full-fill">
+    <canvas id="editor-canvas"
+            class="canvas full-fill"
+            onmousedown="{ return false; }"
+            ng-click="canvasClick($event)"
+            ng-right-click="contextMenu($event)"
+            ng-mousedown="mousePressed($event)">
+        Sadly enough, your browser either does not support canvas at all,
+        or blocks it for some weird reason.
+    </canvas>
+
+    <div class="toolbar-wrap">
+        <div class="toolbar-header">
+            <p>
+                Toolbar
+            </p>
+        </div>
+        <div class="toolbar-content" ng-controller="EditorToolbarCtrl">
+            <table class="toolbar-main-button-set">
+                <tr>
+                    <td>
+                        <input type="button" value="Save" ng-click="toolbarButton('save')"/>
+                    </td>
+                    <td>
+                        <input type="button" value="Load" ng-click="toolbarButton('load')"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="button" value="Configure" ng-click="toolbarButton('config')"/>
+                    </td>
+                    <td>
+                        <input type="button" value="Exit" ng-click="toolbarButton('exit')"/>
+                    </td>
+                </tr>
+            </table>
+
+            <div class="toolbar-tile-select">
+                <div class="toolbar-tile-select-tile-wrap"
+                     ng-repeat="t in getSelectionTiles()"
+                     ng-style="{
+                                   'left': ($index * 100) - ($parent.selectedTile * 100) + (getTileSelectionWidth() / 2) - 50,
+                                   'outline': $index == $parent.currentTile ? 'rgb(205, 176, 104) dashed 4px' : 'none',
+                                   'opacity': getOpacity($index, $parent.selectedTile)
+                               }">
+                    <img class="toolbar-tile-select-tile"
+                         ondragstart="event.preventDefault();"
+                         ng-click="mouseOverTile($index)"
+                         ng-right-click="mouseOverTile($index); selectTile($index);"
+                         ng-src="{{t ? getSelectionImage(t.graphic[0]) : '/content/std/tile_default.png'}}"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <popup-map-conifg>
+
+    </popup-map-conifg>
+
+    <popup-map-load>
+
+    </popup-map-load>
+</div>

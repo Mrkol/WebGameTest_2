@@ -1,0 +1,82 @@
+#tabSettings
+{
+    width: 430px;
+}
+
+#tabSettings>input[type="button"]
+{
+    position: absolute;
+
+    top: 60px;
+    left: 400px;
+
+    height: 30px;
+
+    -ms-transform: rotate(90deg) translate(-30px, 0px);
+    -webkit-transform: rotate(90deg) translate(-30px, 0px);
+    transform: rotate(90deg) translate(-30px, 0px);
+    -ms-transform-origin: left bottom;
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+
+    font: lighter 20px Open Sans;
+
+    text-align: left;
+
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+
+    background-color: rgb(220, 255, 220);
+    border-top: 2px solid rgb(100, 255, 100);
+    border-right: 2px solid rgb(100, 255, 100);
+    border-bottom: 0;
+    border-left: 2px solid rgb(100, 255, 100);
+}
+
+
+.settings
+{
+    position: absolute;
+
+    width: 400px;
+    height: 100%;
+    left: 0;
+    right: auto;
+    top: 0;
+    bottom: 0;
+
+    background-color: rgb(220, 255, 220);
+    border-right: 2px solid rgb(100, 255, 100);
+}
+
+.settings>*
+{
+    margin-left: 40px;
+    margin-right: 9px;
+}
+
+.settings-nickname-tag
+{
+    position: relative;
+    height: 40px;
+
+    margin-top: 4px;
+    margin-bottom: 4px;
+
+    font: bold 22px Open Sans;
+}
+
+.settings-nickname-text
+{
+    position: relative;
+    width: calc(100% - 49px);
+    height: 40px;
+
+    border: none;
+
+    font: bold 22px Open Sans;
+
+    padding-left: 4px;
+    padding-right: 4px;
+}

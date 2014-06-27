@@ -1,0 +1,182 @@
+* 
+{
+	font: lighter 50px Open Sans;/*
+	border: 1px solid !important;
+	border-color: rgb(255, 0, 255) !important;*/
+	padding: 0;
+	margin: 0;
+	
+	color: rgb(0, 0, 0);
+
+    image-rendering: optimize-contrast;
+}
+
+
+body, html
+{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: fixed;
+    -webkit-user-select: none; /* SAFARI, CHROME */
+    -khtml-user-select: none; /* KONQUEROR */
+    -mos-user-select: none; /* FIREFOX */
+    -ms-user-select: none; /* IE */
+    user-select: none; /* CSS3 */
+}
+
+*[disabled]
+{
+    color: rgb(120, 120, 120);
+}
+
+p:hover, span:hover
+{
+    cursor: default;
+}
+
+.hoverable:hover
+{
+    cursor: initial;
+}
+
+.game-wrapper
+{
+	position: absolute;
+}
+
+.full-fill
+{
+    width: 100%;
+    height: 100%;
+}
+
+.tab-contract
+{
+	-ms-transform: translate(-400px, 0px);
+	-webkit-transform: translate(-400px, 0px);
+	transform: translate(-400px, 0px);
+	
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-ms-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s;
+
+    -webkit-user-select: none !important; /* SAFARI, CHROME */
+    -khtml-user-select: none !important; /* KONQUEROR */
+    -mos-user-select: none !important; /* FIREFOX */
+    -ms-user-select: none !important; /* IE */
+    user-select: none !important; /* CSS3 */
+}
+
+.tab-contract *
+{
+    -webkit-user-select: none !important; /* SAFARI, CHROME */
+    -khtml-user-select: none !important; /* KONQUEROR */
+    -mos-user-select: none !important; /* FIREFOX */
+    -ms-user-select: none !important; /* IE */
+    user-select: none !important; /* CSS3 */
+}
+
+.tab
+{
+	-webkit-transition: 0.2s;
+	-moz-transition: 0.2s;
+	-ms-transition: 0.2s;
+	-o-transition: 0.2s;
+	transition: 0.2s;
+
+    pointer-events: none;
+
+    position: absolute;
+    height: 100%;
+
+    left: 0;
+    right: auto;
+    top: 0;
+    bottom: 0;
+
+    z-index: 2;
+}
+
+.tab>*
+{
+    pointer-events: initial;
+}
+
+input:focus
+{
+    outline: 0;
+}
+
+.div_-wrap
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.div_-content
+{
+    position: absolute;
+
+    height: 100%;
+    width: calc(100% - 20px);
+
+    overflow: hidden;
+}
+
+.div_-scroll-wrap
+{
+    position: absolute;
+
+    width: 20px;
+    height: 100%;
+
+    right: 0;
+}
+
+.div_-scroller
+{
+    position: absolute;
+
+    width: 20px;
+    height: 30px;
+
+    background-color: rgb(195, 195, 195) !important;
+    border-radius: 2px !important;
+    border: none !important;
+}
+
+.unselectable {
+    -webkit-user-select: none; /* SAFARI, CHROME */
+    -khtml-user-select: none; /* KONQUEROR */
+    -mos-user-select: none; /* FIREFOX */
+    -ms-user-select: none; /* IE */
+    user-select: none; /* CSS3 */
+}
+
+.selectable {
+    -webkit-user-select: initial; /* SAFARI, CHROME */
+    -khtml-user-select: initial; /* KONQUEROR */
+    -mos-user-select: initial; /* FIREFOX */
+    -ms-user-select: initial; /* IE */
+    user-select: initial; /* CSS3 */
+}
+
+.default-cursor
+{
+    cursor: default;
+}
+
+.click-through
+{
+    pointer-events: none;
+}
+.no-click-through
+{
+    pointer-events: initial;
+}

@@ -1,0 +1,14 @@
+
+
+<form class="main-menu-login-form" ng-submit="login()" ng-if="state() == 0">
+    <input type="text" placeholder="Username" ng-model="$parent.username"/>
+    <input type="password" placeholder="Password" ng-model="$parent.password"/>
+    <span>{{$parent.message}}</span>
+    <input type="submit" value="Log in"/>
+    <input type="button" value="Register" ng-click="register()"/>
+</form>
+
+<div class="main-menu-user-info" ng-if="state() == 1">
+    <input type="button" value="Log out" ng-click="$parent.logout()"/>
+    <span>{{getUsername()}}</span>
+</div>

@@ -1,0 +1,85 @@
+<html lang="en" ng-app="mainModule">
+	<head>
+		<title>AJS</title>
+		
+		
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700,800' rel='stylesheet' type='text/css'>
+
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link href="/client/styles/style.css" rel="stylesheet" type="text/css">
+        <link href="/client/styles/tab_chat.css" rel="stylesheet" type="text/css">
+        <link href="/client/styles/tab_settings.css" rel="stylesheet" type="text/css">
+        <link href="/client/styles/templates/editor.css" rel="stylesheet" type="text/css">
+        <link href="/client/styles/templates/mainmenu.css" rel="stylesheet" type="text/css">
+        <link href="/client/styles/templates/test.css" rel="stylesheet" type="text/css">
+        <link href="/client/styles/templates/loading.css" rel="stylesheet" type="text/css">
+        <link href="/client/styles/animations.css" rel="stylesheet" type="text/css">
+
+
+        <script src="/lib/angular.min.js" type="text/javascript"></script>
+        <script src="/lib/angular-route.min.js" type="text/javascript"></script>
+        <script src="/lib/angular-cookies.min.js" type="text/javascript"></script>
+        <script src="/lib/angular-animate.min.js" type="text/javascript"></script>
+        <script src="/lib/md5-min.js" type="text/javascript"></script>
+
+        <script src="/client/scripts/app.js" type="text/javascript"></script>
+        <script src="/client/services/authorization.js" type="text/javascript"></script>
+        <script src="/client/services/content.js" type="text/javascript"></script>
+        <script src="/client/services/map.js" type="text/javascript"></script>
+
+        <script src="/client/scripts/controllers/chat.js" type="text/javascript"></script>
+        <script src="/client/scripts/controllers/editorToolbar.js" type="text/javascript"></script>
+
+        <script src="/client/scripts/controllers/views/editor.js" type="text/javascript"></script>
+        <script src="/client/scripts/controllers/views/ingame.js" type="text/javascript"></script>
+
+        <script src="/client/scripts/util.js" type="text/javascript"></script>
+        <script src="/client/scripts/game.js" type="text/javascript"></script>
+        <script src="/client/scripts/tabs.js" type="text/javascript"></script>
+
+        <script src="/client/directives/div_.js" type="text/javascript"></script>
+        <script src="/client/directives/ngRightClick.js" type="text/javascript"></script>
+        <script src="/client/directives/loginform.js" type="text/javascript"></script>
+        <script src="/client/directives/popupMapConifg.js" type="text/javascript"></script>
+        <script src="/client/directives/popupMapLoad.js" type="text/javascript"></script>
+	</head>
+
+
+	<body ng-controller="GlobalAppCtrl">
+		
+		<div ng-view class="game-wrapper full-fill">
+
+		</div>
+		
+		<div id="tabChat" class="tab tab-contract" ng-controller="ChatCtrl">
+			<div class="chat">
+				<div_ id="messagesWrap" class="chat-messages">
+					 <div class="chat-message" ng-repeat="message in messages">
+                        <p class="hoverable">{{message.username}}</p><p class="hoverable">:</p>
+                        <br/>
+                        <span class="hoverable">{{message.message}}</span>
+                        <hr/>
+					</div>
+				</div_>
+				
+				<div class="chat-send">
+					<input type="text" maxlength="200" id="chatTextbox" ng-keypress="textboxKeypress($event)" class="chat-send-textbox"/>
+					<input type="button" class="chat-send-button"    ng-click="sendMessage()"/>
+					<input type="button" class="chat-refresh-button" ng-click="refreshChat()"/>
+				</div>
+			</div>
+			<input type="button" value="Chat" onclick="switchTab(1)"/>
+		</div>
+
+        <div id="tabSettings" class="tab tab-contract">
+            <div class="settings">
+                <!--<span class="settings-nickname-tag">
+                    Nickname
+                </span>
+                <input type="text" id="settings_nickname" class="settings-nickname-text" placeholder="Anonymous"/>-->
+            </div>
+            <input type="button" value="Settings" onclick="switchTab(2)"/>
+        </div>
+	</body>
+</html>

@@ -1,0 +1,178 @@
+
+.main-menu
+{
+
+}
+
+.main-menu-buttons-container
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    width: 400px;
+    height: 190px;
+
+    background-color: rgb(230, 170, 255);
+    border-top: 2px solid rgb(150, 100, 175);
+    border-left: 2px solid rgb(150, 100, 175);
+}
+
+.main-menu-buttons-container>input[type="button"]
+{
+    background-color: rgb(230, 170, 255);
+    border: 2px solid rgb(150, 100, 175);
+
+    width: calc(100% - 20px);
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    font: lighter 30px Open Sans;
+
+    -webkit-transition: background-color linear 0.1s;
+    -moz-transition: background-color linear 0.1s;
+    -ms-transition: background-color linear 0.1s;
+    -o-transition: background-color linear 0.1s;
+    transition: background-color linear 0.1s;
+}
+
+
+.main-menu-buttons-container>input[type="button"]:active,
+.main-menu-login-form>input[type="button"]:active,
+.main-menu-login-form>input[type="submit"]:active,
+.main-menu-user-info>input[type="button"]:active
+{
+    background-color: rgb(180, 130, 200) !important;
+}
+
+
+.main-menu-buttons-container>input[type="button"]:hover,
+.main-menu-login-form>input[type="button"]:hover,
+.main-menu-login-form>input[type="submit"]:hover,
+.main-menu-user-info>input[type="button"]:hover
+{
+    background-color: rgb(230, 200, 255);
+}
+
+.main-menu-login-form
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 400px;
+    height: 225px;
+
+    background-color: rgb(230, 170, 255);
+    border-bottom: 2px solid rgb(150, 100, 175);
+    border-left: 2px solid rgb(150, 100, 175);
+}
+
+.main-menu-login-form>span
+{
+    font: lighter 20px Open Sans;
+
+    height: 25px;
+    width: 380px;
+
+    padding: 0;
+    margin: 10px 10px 0 10px;
+
+    display: block;
+
+    vertical-align: top;
+    float: left;
+}
+
+.main-menu-login-form>input[type="text"],
+.main-menu-login-form>input[type="password"]
+{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(150, 100, 175);
+
+    width: 380px;
+    height: 50px;
+
+    margin: 10px 10px 0 10px;
+    padding-left: 5px;
+
+    font: lighter 30px Open Sans;
+}
+
+.main-menu-login-form>input[type="button"],
+.main-menu-login-form>input[type="submit"]
+{
+    background-color: rgb(230, 170, 255);
+    border: 2px solid rgb(150, 100, 175);
+
+    width: 185px;
+    height: 50px;
+
+    margin: 10px 0 0 10px;
+
+    float: left;
+    vertical-align: top;
+    display: inline;
+
+    font: lighter 30px Open Sans;
+    text-align: center;
+
+    -webkit-transition: background-color linear 0.1s;
+    -moz-transition: background-color linear 0.1s;
+    -ms-transition: background-color linear 0.1s;
+    -o-transition: background-color linear 0.1s;
+    transition: background-color linear 0.1s;
+}
+
+.main-menu-user-info
+{
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    height: 70px;
+
+    background-color: rgb(230, 170, 255);
+    border-bottom: 2px solid rgb(150, 100, 175);
+    border-left: 2px solid rgb(150, 100, 175);
+}
+
+.main-menu-user-info>input[type="button"]
+{
+    background-color: rgb(230, 170, 255);
+    border: 2px solid rgb(150, 100, 175);
+
+    width: 185px;
+    height: 50px;
+
+    margin: 10px 10px 0 10px;
+
+    float: right;
+    vertical-align: top;
+    display: inline;
+
+    font: lighter 30px Open Sans;
+    text-align: center;
+
+    -webkit-transition: background-color linear 0.1s;
+    -moz-transition: background-color linear 0.1s;
+    -ms-transition: background-color linear 0.1s;
+    -o-transition: background-color linear 0.1s;
+    transition: background-color linear 0.1s;
+}
+
+.main-menu-user-info>span
+{
+    height: 50px;
+
+    margin: 10px 0 0 10px;
+
+    font: lighter 40px Open Sans;
+
+    float: right;
+    vertical-align: top;
+    display: inline;
+}

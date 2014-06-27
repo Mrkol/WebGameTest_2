@@ -1,0 +1,405 @@
+
+.canvas
+{
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+}
+
+.toolbar-wrap
+{
+    position: absolute;
+    top: auto;
+    bottom: 0;
+
+    width: 100%;
+    height: 130px;
+
+    -ms-transform: translate(0, 100px);
+    -webkit-transform: translate(0, 100px);
+    transform: translate(0, 100px);
+
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -ms-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s;
+
+
+    background-color: rgb(255, 225, 155);
+    border-top: 2px solid rgb(226, 177, 70);
+}
+
+.toolbar-wrap:hover
+{
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -ms-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s;
+}
+
+.toolbar-header
+{
+    width: 100%;
+    height: 30px;
+    padding: 0 10px;
+}
+
+.toolbar-header>p
+{
+    font: lighter 22px Open Sans;
+}
+
+.toolbar-content
+{
+    padding: 0 2px;
+}
+
+.toolbar-main-button-set
+{
+    border-spacing: 2px;
+}
+
+.toolbar-main-button-set input[type="button"]
+{
+    width: 160px;
+    height: 47px;
+
+    background-color: rgb(230, 200, 120);
+    border: 2px solid rgb(205, 176, 104);
+    font: 28px Open Sans;
+    text-align: left;
+    padding: 0 10px;
+
+    -webkit-transition: background-color linear 0.1s;
+    -moz-transition: background-color linear 0.1s;
+    -ms-transition: background-color linear 0.1s;
+    -o-transition: background-color linear 0.1s;
+    transition: background-color linear 0.1s;
+}
+
+.toolbar-main-button-set input[type="button"]:hover
+{
+    background-color: rgb(230, 220, 180);
+}
+
+.toolbar-main-button-set input[type="button"]:active
+{
+    background-color: rgb(222, 192, 111) !important;
+}
+
+.popup-map-config
+{
+    background-color: rgb(255, 130, 175);
+    border: 2px solid rgb(255, 80, 110);
+
+    width: 1200px;
+    height: 500px;
+
+    position: absolute;
+
+    padding: 10px;
+}
+
+.popup-map-config>table span
+{
+    font: 40px Open Sans;
+}
+
+.popup-map-config>table input[type="text"]
+{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 80, 110);
+    font: 32px Open Sans;
+
+    width: 200px;
+    height: 44px;
+
+    margin-left: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.popup-map-config>table
+{
+    border-spacing: 4px;
+}
+
+.popup-map-config input[type="button"]
+{
+    background-color: rgb(255, 110, 140);
+    border: 2px solid rgb(255, 80, 110);
+    -webkit-transition: background-color linear 0.1s;
+    -moz-transition: background-color linear 0.1s;
+    -ms-transition: background-color linear 0.1s;
+    -o-transition: background-color linear 0.1s;
+    transition: background-color linear 0.1s;
+}
+
+.popup-map-config input[type="button"]:hover,
+.popup-map-config-close:hover
+{
+    background-color: rgb(255, 150, 200);
+}
+
+.popup-map-config input[type="button"]:active,
+.popup-map-config-close:active
+{
+    background-color: rgb(255, 100, 110) !important;
+}
+
+.popup-close
+{
+    width: 20px;
+    height: 20px;
+
+    font: 12px Open Sans;
+
+    position: absolute;
+    top: 2px;
+    right: 2px;
+}
+
+.popup-map-config-apply
+{
+    width: 110px;
+    height: 50px;
+
+    font: 36px Open Sans;
+
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.popup-map-config-libs-wrap
+{
+    width: 60%;
+    height: calc(100% - 20px - 4px);
+
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+.popup-map-config-libs-header
+{
+    width: 100%;
+    height: 50px;
+}
+
+.popup-map-config-libs-header-map
+{
+    float: left;
+    padding-left: 10px;
+}
+
+.popup-map-config-libs-header-server
+{
+    float: right;
+    padding-right: 10px;
+}
+
+.popup-map-config-libs-header>span
+{
+    font: 34px Open Sans;
+}
+
+.popup-map-config-libs-map,
+.popup-map-config-libs-server
+{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 80, 110);
+}
+
+.popup-map-config-libs-map
+{
+    width: calc(50% - 8px);
+    height: calc(100% - 50px);
+
+    float: left;
+}
+
+.popup-map-config-libs-server
+{
+    width: calc(50% - 8px);
+    height: calc(100% - 50px);
+
+    float: right;
+}
+
+.popup-map-config-libs-item
+{
+    width: calc(100% - 5px);
+    height: 50px;
+    padding-left: 5px;
+}
+
+.popup-map-config-libs-item:hover
+{
+    background-color: rgba(0, 0, 0, 0.10);
+}
+
+.popup-map-config-libs-item:active
+{
+    background-color: rgba(0, 0, 0, 0.40);
+}
+
+.popup-map-config-libs-item>span
+{
+    font: 34px Open Sans;
+}
+
+.popup-map-load
+{
+    background-color: rgb(160, 80, 255);
+    border: 2px solid rgb(100, 40, 200);
+
+    width: 800px;
+    /*height: 568px;*/
+
+    padding: 10px;
+
+    position: absolute;
+}
+
+.popup-map-load input[type="button"]
+{
+    background-color: rgb(120, 60, 240);
+    border: 2px solid rgb(100, 40, 200);
+    -webkit-transition: background-color linear 0.1s;
+    -moz-transition: background-color linear 0.1s;
+    -ms-transition: background-color linear 0.1s;
+    -o-transition: background-color linear 0.1s;
+    transition: background-color linear 0.1s;
+}
+
+.popup-map-load input[type="button"]:hover
+{
+    background-color: rgb(150, 100, 255);
+}
+
+.popup-map-load input[type="button"]:active
+{
+    background-color: rgb(100, 50, 220);
+}
+
+.popup-map-load-list
+{
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(100, 40, 200);
+    width: 796px;
+    height: 400px;
+}
+
+.popup-map-load-list-item
+{
+    width: 100%;
+    height: 50px;
+    -webkit-transition: background-color linear 0.1s;
+    -moz-transition: background-color linear 0.1s;
+    -ms-transition: background-color linear 0.1s;
+    -o-transition: background-color linear 0.1s;
+    transition: background-color linear 0.1s;
+}
+
+.popup-map-load-list span
+{
+    font: 34px Open Sans;
+}
+
+.popup-map-load-list-item:hover
+{
+    background-color: rgba(0, 0, 0, 0.10);
+}
+
+.popup-map-load-list-item:active
+{
+    background-color: rgba(0, 0, 0, 0.40);
+}
+
+.popup-map-load-path
+{
+    border: 2px solid rgb(100, 40, 200);
+
+    padding-left: 5px;
+    margin-top: 10px;
+    width: 800px;
+    height: 50px;
+
+    font: 34px Open Sans;
+}
+
+.popup-map-load-done
+{
+    margin-top: 10px;
+    width: 390px;
+    height: 50px;
+
+    font: 34px Open Sans;
+}
+
+.toolbar-tile-select
+{
+    width: 50%;
+    height: 100px;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    overflow: hidden;
+}
+
+.toolbar-tile-select-tile-wrap
+{
+    width: 64px;
+    height: 64px;
+    margin: 18px;
+
+    position: absolute;
+    top: 0;
+
+    -webkit-transition: left linear 0.1s, opacity linear 0.1s;
+    -moz-transition: left linear 0.1s, opacity linear 0.1s;
+    -ms-transition: left linear 0.1s, opacity linear 0.1s;
+    -o-transition: left linear 0.1s, opacity linear 0.1s;
+    transition: left linear 0.1s, opacity linear 0.1s;
+}
+
+
+.toolbar-tile-select-tile
+{
+    width: 64px;
+    height: 64px;
+
+    image-rendering: optimizeSpeed;             /* GIVE ME SPEED                  */
+    image-rendering: -moz-crisp-edges;          /* Firefox                        */
+    image-rendering: -o-crisp-edges;            /* Opera                          */
+    image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+    image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+    -ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

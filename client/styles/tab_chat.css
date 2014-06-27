@@ -1,0 +1,152 @@
+#tabChat
+{
+	width: 430px;
+}
+
+#tabChat>input[type="button"]
+{
+	position: absolute;
+	
+	top: 0px;
+	left: 400px;
+	
+	height: 30px;
+	
+	-ms-transform: rotate(90deg) translate(-30px, 0px);
+	-webkit-transform: rotate(90deg) translate(-30px, 0px);
+	transform: rotate(90deg) translate(-30px, 0px);
+	-ms-transform-origin: left bottom;
+	-webkit-transform-origin: left bottom;
+	transform-origin: left bottom;
+	
+	font: lighter 20px Open Sans;
+	
+	text-align: left;
+	
+	padding-left: 5px;
+	padding-right: 5px;
+	margin: 0;
+	
+	background-color: rgb(220, 220, 255);
+	border-top: 2px solid rgb(100, 100, 255);
+	border-right: 2px solid rgb(100, 100, 255);
+	border-bottom: 0;
+	border-left: 0;
+}
+
+.chat
+{
+	position: absolute;
+	
+	width: 400px;
+	height: 100%;
+	left: 0;
+	right: auto;
+	top: 0;
+	bottom: 0;
+	
+	background-color: rgb(220, 220, 255);
+	border-right: 2px solid rgb(100, 100, 255);
+}
+
+.chat-messages
+{
+	width: calc(100% - 32px);
+	height: calc(100% - 40px);
+	overflow-y: hidden;
+	overflow-x: hidden;
+
+    padding-left: 32px;
+}
+
+.chat-message
+{
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.chat-message>hr
+{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(100, 100, 255);
+    border: none;
+    outline: none;
+}
+
+.chat-message>p, .chat-message>span
+{
+	display: inline;
+	font: lighter 26px Open Sans;
+    word-wrap: break-word;
+}
+
+.chat-message>p:first-child
+{
+	color: rgb(100, 160, 160);
+}
+
+.chat-send
+{
+	width: 100%;
+	height: 40px;
+	padding: 0;
+	border-top: 2px solid rgb(100, 100, 255);
+}
+
+.chat-send-textbox
+{
+	position: absolute;
+	width: calc(100% - 81px);
+	height: 40px;
+    font: lighter 26px Open Sans;
+	left: 0;
+	
+	border: 0;
+
+    padding: 0 4px;
+    margin: 0 0 0 1px;
+}
+
+.chat-send-button
+{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	right: 40px;
+	font: bold 22px Open Sans;
+
+    background: rgb(150, 150, 255) url("/client/resources/icon_send.png") no-repeat center;
+    background-size: 100% 100%;
+	border: 0;
+}
+
+.chat-refresh-button
+{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	margin: 0;
+	padding: 0;
+	right: 0;
+	font: bold 22px Open Sans;
+
+    background: rgb(150, 150, 255) url("/client/resources/icon_refresh.png") no-repeat center;
+    background-size: 100% 100%;
+	border: 0;
+}
+
+.chat-send-button:hover, .chat-refresh-button:hover
+{
+    background-color: rgb(180, 180, 255);
+}
+
+.chat-send-button:active, .chat-refresh-button:active
+{
+    background-color: rgb(100, 100, 255);
+}
+
+
+

@@ -1,0 +1,45 @@
+.ng-hide-add,
+.ng-hide-remove
+{
+    -webkit-transition: opacity linear 0.2s;
+    -moz-transition: opacity linear 0.2s;
+    -ms-transition: opacity linear 0.2s;
+    -o-transition: opacity linear 0.2s;
+    transition: opacity linear 0.2s;
+    display: block !important;
+}
+
+.ng-hide-remove,
+.ng-hide-add.ng-hide-add-active
+{
+    opacity: 0;
+}
+
+.ng-hide-remove.ng-hide-remove-active,
+.ng-hide-add
+{
+    opacity: 1;
+}
+
+.ng-enter,
+.ng-leave
+{
+    -webkit-transition: opacity linear 0.5s;
+    -moz-transition: opacity linear 0.5s;
+    -ms-transition: opacity linear 0.5s;
+    -o-transition: opacity linear 0.5s;
+    transition: opacity linear 0.5s;
+    display: block !important;
+}
+
+.ng-enter,
+.ng-leave.ng-leave-active
+{
+    opacity: 0;
+}
+
+.ng-enter.ng-enter-active,
+.ng-leave
+{
+    opacity: 1;
+}

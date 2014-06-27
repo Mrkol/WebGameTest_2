@@ -1,0 +1,49 @@
+<div id="popup-map-config"
+     class="popup-map-config popup-animation"
+     ng-show="show()"
+     ng-mousedown="startMoving($event)"
+     ng-style="{'left': posX, 'top': posY}">
+    <table ng-mousedown="true">
+        <tr>
+            <td>
+                <span>
+                    Name
+                </span>
+            </td>
+            <td>
+                <input type="text" ng-model="name"/>
+            </td>
+        </tr>
+    </table>
+
+    <div class="popup-map-config-libs-wrap click-through">
+        <div class="popup-map-config-libs-header">
+            <span class="popup-map-config-libs-header-map">
+                Current Packs
+            </span>
+
+            <span class="popup-map-config-libs-header-server">
+                Available Packs
+            </span>
+        </div>
+
+        <div class="popup-map-config-libs-map no-click-through">
+            <div class="popup-map-config-libs-item"
+                 ng-repeat="pack in packsMap"
+                 ng-click="fromMap($index)">
+                <span class="click-through">{{pack}}</span>
+            </div>
+        </div>
+
+        <div class="popup-map-config-libs-server no-click-through">
+            <div class="popup-map-config-libs-item"
+                 ng-repeat="pack in packsServer"
+                 ng-click="toMap($index)">
+                <span class="click-through">{{pack}}</span>
+            </div>
+        </div>
+    </div>
+
+    <input type="button" value="Done" class="popup-map-config-apply" ng-click="done()"/>
+    <input class="popup-close" type="button" value="X" ng-click="close()"/>
+</div>
